@@ -1,0 +1,102 @@
+# NIGHTERRORCO
+
+Este repositorio te permite aprovechar el poder de los agentes remotos de BLACKBOX AI usando Blackbox Cloud. Podrás ejecutar tareas simultáneas, monitorear en tiempo real y gestionar pull requests en cualquier base de código, directamente desde tu navegador.
+
+---
+
+## BLACKBOX AI Remote Agents
+
+> Aprovecha el poder de los agentes de Blackbox de forma remota usando tu navegador con Blackbox Cloud. Ejecuta tareas, monitorea procesos y gestiona pull requests en cualquier base de código.
+
+![BLACKBOX Cloud](https://mintcdn.com/blackboxai-3b9e98f8/oYPlkK3OjNa81gIf/images/blackbox-cloud/cloud_home.png?fit=max&auto=format&n=oYPlkK3OjNa81gIf&q=85&s=98727807b910706c179d59c6933d7c7c)
+
+### Overview
+
+Blackbox Cloud es una plataforma remota y basada en navegador que integra todos los agentes Blackbox a tu flujo de trabajo. Puedes ejecutar varios agentes simultáneamente, asignar tareas y monitorear el progreso en tiempo real, sin depender de tu dispositivo local.
+
+Con Blackbox Cloud puedes enviar solicitudes complejas a los agentes, que las ejecutarán por ti en un entorno remoto, crear pull requests y hasta hacer revisiones de código automáticas. Es ideal para desarrolladores, equipos y organizaciones, con repositorios de cualquier tamaño.
+
+[Ver video explicativo en YouTube](https://www.youtube.com/embed/AXV8kfpgm4E)
+
+---
+
+### Getting Started
+
+1. **Accede a la plataforma**  
+   Entra a [cloud.blackbox.ai](https://cloud.blackbox.ai) e inicia sesión con Google o GitHub.  
+   ![Opciones de login](https://mintcdn.com/blackboxai-3b9e98f8/SjZtZbmZ2uIFxdau/images/blackbox-cloud/cloud_login_google_or_git.jpeg?fit=max&auto=format&n=SjZtZbmZ2uIFxdau&q=85&s=2bd285c10b2f68c63c56fcb5bb112a41)
+
+2. **Conecta tu repositorio Git**  
+   Si entraste con Google, haz clic en **Connect Git** arriba a la derecha.  
+   ![Conectar Git](https://mintcdn.com/blackboxai-3b9e98f8/HZwhvn3RM_3OJq3Z/images/blackbox-cloud/cloud_connect_git.png?fit=max&auto=format&n=HZwhvn3RM_3OJq3Z&q=85&s=06cd985ea51ccb71b3707ae117291331)
+
+3. **Agrega tu API Key**  
+   Administra tu API key en la configuración del perfil (dashboard). Puedes conseguir la clave desde el [Blackbox API Dashboard](https://www.blackbox.ai/dashboard).  
+   ![Menú API Key](https://mintcdn.com/blackboxai-3b9e98f8/Bfp3PHs7PtTgjibP/images/blackbox-cloud/cloud_profile_menu.png?fit=max&auto=format&n=Bfp3PHs7PtTgjibP&q=85&s=f32a99a4747dd321684b1e2866287708)  
+   ![Agregar API Key](https://mintcdn.com/blackboxai-3b9e98f8/y1z3jcBpbSfyh6yS/images/blackbox-cloud/cloud_add_api_key.png?fit=max&auto=format&n=y1z3jcBpbSfyh6yS&q=85&s=eee1ad14619900d23eba8f5ce329e1c4)
+
+4. **Selecciona modelo y proveedor de IA**  
+   Escoge el modelo y proveedor de IA para tus agentes.  
+   ![Select Provider](https://mintcdn.com/blackboxai-3b9e98f8/HZwhvn3RM_3OJq3Z/images/blackbox-cloud/cloud_select_provider.png?fit=max&auto=format&n=HZwhvn3RM_3OJq3Z&q=85&s=2afa2d60e52dab32b3e7f2ec2916ad72)  
+   ![Select Model](https://mintcdn.com/blackboxai-3b9e98f8/y1z3jcBpbSfyh6yS/images/blackbox-cloud/cloud_select_model.png?fit=max&auto=format&n=y1z3jcBpbSfyh6yS&q=85&s=4ab4e395e9941ab6501ecce1dbffdab2)
+
+   **Uso gratuito**  
+   - Solicitudes ilimitadas con Grok Code Fast Model (Blackbox provider).
+   - Multi agente gratis.  
+   ![Unlimited Grok](https://mintcdn.com/blackboxai-3b9e98f8/3rpzzi2XQNyf2TCk/images/blackbox-cloud/cloud_unlimited_grok_code_fast.png?fit=max&auto=format&n=3rpzzi2XQNyf2TCk&q=85&s=7ccc0d6ccea5d24750084c9757d30988)
+
+5. **Selecciona tu repositorio**  
+   Elige el repo y la rama para trabajar.  
+   ![Select Repo](https://mintcdn.com/blackboxai-3b9e98f8/y1z3jcBpbSfyh6yS/images/blackbox-cloud/cloud_git_repo_select.png?fit=max&auto=format&n=y1z3jcBpbSfyh6yS&q=85&s=10402ed72f00e193883e68335f89f584)
+
+   > **Importante**: Por limitación técnica, no se puede clonar repos vacíos. Confirma que el repo tiene al menos un commit inicial.
+
+6. **Solicita tu primera tarea**  
+   Escribe tu primer prompt para que el agente empiece a trabajar.  
+   ![Primera tarea](https://mintcdn.com/blackboxai-3b9e98f8/y1z3jcBpbSfyh6yS/images/blackbox-cloud/cloud_first_task.png?fit=max&auto=format&n=y1z3jcBpbSfyh6yS&q=85&s=bb414a763ee5a028b4d8531d7d84634c)
+
+7. **Ejecuta tareas múltiples en paralelo**  
+   Ejecuta varias tareas a la vez con diferentes agentes.  
+   ![Multi tarea](https://mintcdn.com/blackboxai-3b9e98f8/6dAWtbL_78nZmuG4/images/blackbox-cloud/cloud_run_multi_task.png?fit=max&auto=format&n=6dAWtbL_78nZmuG4&q=85&s=f53b129db7284a1df97fa2f91608b961)
+
+---
+
+## Instalación
+
+(Pon aquí los pasos de instalación si tu proyecto tiene alguno)
+El acceso principal a BLACKBOX AI Remote Agents se realiza a través de la plataforma Blackbox Cloud, lo que elimina la necesidad de una instalación local compleja. Siga los pasos de la sección "Getting Started" para la configuración inicial remota.
+Si se requiere una integración o desarrollo local directo con el código base del agente (para contribuciones avanzadas), proceda con el flujo estándar:
+Clonar el Repositorio:
+git clone https://aws.amazon.com/es/what-is/repo/
+Instalar Dependencias (si aplica):
+npm install o el comando específico de su gestor de paquetes.
+---
+
+## Uso
+
+(Agrega ejemplos de comandos, instrucciones o tips para el usuario aquí)
+
+A continuación, se presentan ejemplos de comandos para tareas comunes:
+Implementación de una nueva característica:
+Implementar la funcionalidad de inicio de sesión utilizando Google OAuth, asegurando que los tokens se guarden de forma segura.
+Corrección y depuración de errores:
+Corregir el error que provoca la desconexión del servidor cuando más de 100 usuarios están activos en la API de WebSocket.
+Refactorización y optimización de código:
+Refactorizar el módulo de manejo de caché en 'src/cache.js' para optimizar el tiempo de respuesta en un 15%.
+Revisión de Código:
+Revisar y ofrecer comentarios sobre la Pull Request #45 sobre la nueva función de carrito de compras.
+Contribuciones
+Agradecemos su interés en contribuir a este proyecto. Para proponer mejoras o correcciones, siga el siguiente flujo de trabajo:
+Realice un Fork del repositorio y clónelo localmente.
+Cree una nueva rama para su trabajo (git checkout -b feature/nombre-de-la-funcion).
+Realice sus commits, asegurándose de que sigan la convención de mensajes establecida (si existe).
+Envíe una Pull Request (PR) detallada. Incluya una descripción clara de los cambios realizados y la justificación.
+Antes de enviar su PR, asegúrese de que todas las pruebas pasen.
+Licencia
+Este proyecto está distribuido bajo la Licencia [INSERTAR LICENCIA ESPECÍFICA AQUÍ: ej. MIT, Apache 2.0, GPL].
+Por favor, consulte el archivo LICENSE.md para obtener todos los detalles sobre los términos de uso, modificación y distribución.
+Este texto completa la estructura de su documentación. ¿Desea que verifique algún otro documento del proyecto o le asista en la elección de la Licencia?
+
+## Licencia
+
+(ej. MIT, Apache 2.0)
