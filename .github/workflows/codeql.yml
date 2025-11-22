@@ -21,7 +21,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ['python', 'javascript-typescript', 'java-kotlin']
+        # Only scanning for javascript-typescript because the repository currently 
+        # only contains HTML with embedded JavaScript. 
+        # Removed 'python' and 'java-kotlin' as they caused failures due to missing files.
+        language: [ 'javascript-typescript' ]
 
     steps:
     - name: Checkout repository
@@ -33,7 +36,8 @@ jobs:
         languages: ${{ matrix.language }}
         queries: security-and-quality
 
-    # Autobuild funciona bien para proyectos estándar
+    # Autobuild is generally not required for interpreted languages like JS/TS 
+    # but keeping it is harmless and standard practice.
     - name: Autobuild
       uses: github/codeql-action/autobuild@v4
 
@@ -41,3 +45,4 @@ jobs:
       uses: github/codeql-action/analyze@v4
       with:
         category: "/language:${{ matrix.language }}"
+        
