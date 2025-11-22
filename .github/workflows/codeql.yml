@@ -23,7 +23,6 @@ jobs:
       matrix:
         # Only scanning for javascript-typescript because the repository currently 
         # only contains HTML with embedded JavaScript. 
-        # Removed 'python' and 'java-kotlin' as they caused failures due to missing files.
         language: [ 'javascript-typescript' ]
 
     steps:
@@ -36,13 +35,11 @@ jobs:
         languages: ${{ matrix.language }}
         queries: security-and-quality
 
-    # Autobuild is generally not required for interpreted languages like JS/TS 
-    # but keeping it is harmless and standard practice.
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v4
+    # Removed Autobuild step as it is not needed for interpreted languages (JS/TS)
+    # and can cause issues in repositories without standard build files (package.json).
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v4
       with:
         category: "/language:${{ matrix.language }}"
-        
+        ñ
