@@ -1,4 +1,4 @@
-name: "CodeQL Advanced"
+name: "CodeQL Full"
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
-    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+    runs-on: ubuntu-latest
     permissions:
       security-events: write
       packages: read
@@ -21,27 +21,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - language: 'python'
-            build-mode: 'none'
-          - language: 'javascript-typescript'
-            build-mode: 'none'
-          # Agrega más lenguajes según sea necesario
-          # Por ejemplo, para C/C++:
-          # - language: 'c-cpp'
-          #   build-mode: 'autobuild'
-          # Para C#:
-          # - language: 'csharp'
-          #   build-mode: 'autobuild'
-          # Para Java/Kotlin:
-          # - language: 'java-kotlin'
-          #   build-mode: 'autobuild'
-          # Para Go:
-          # - language: 'go'
-          #   build-mode: 'autobuild'
-          # Para Swift:
-          # - language: 'swift'
-          #   build-mode: 'autobuild'
+        language: ['python', 'javascript-typescript', 'java-kotlin']
 
     steps:
     - name: Checkout repository
@@ -52,21 +32,12 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         queries: security-and-quality
-        build-mode: ${{ matrix.build-mode }}
-        # Habilita el caché de dependencias para mejorar el rendimiento
-        dependency-caching: 'true'
 
+    # Autobuild funciona bien para proyectos estándar
     - name: Autobuild
-      if: ${{ matrix.build-mode == 'autobuild' }}
       uses: github/codeql-action/autobuild@v4
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v4
       with:
-        category: "/language:${{matrix.language}}"
-
-    - name: Upload SARIF results
-      uses: github/codeql-action/upload-sarif@v4
-      with:
-        sarif_file: ${{ github.workspace }}/**/*.sarif
-        
+        category: "/language:${{ matrix.language }}"
