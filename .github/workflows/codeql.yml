@@ -1,5 +1,4 @@
 name: "CodeQL Full"
-
 on:
   push:
     branches: [ "main", "master" ]
@@ -21,30 +20,20 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Only scanning for javascript-typescript because the repository currently 
-        # only contains HTML with embedded JavaScript. 
         language: [ 'javascript-typescript' ]
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v4
-      with:
-        languages: ${{ matrix.language }}
-        queries: security-and-quality
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: ${{ matrix.language }}
+          queries: security-and-quality
 
-    # Removed Autobuild step as it is not needed for interpreted languages (JS/TS)
-    # and can cause issues in repositories without standard build files (package.json).
+      # La autobuild se elimina porque no aplica para JS/TS
 
-    -Usos : github/codeql-action/analyze@v4
-  con :
-    categoría : " /idioma:${{ matrix.language }}"
-
-        category: "/language:${{ matrix.language }}"
-            - nombre : Realizar análisis de CodeQL
-      Usos : github/codeql-action/analyze@v4
-      con :
-        categoría : " /idioma:${{ matrix.language }} "
+      - name: Analyze CodeQL
+        uses: github/codeql-action/analyze@v4
         
