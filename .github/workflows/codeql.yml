@@ -22,6 +22,11 @@ on:
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
+          matrix:
+        include:
+          - language: 'python'
+          - language: 'csharp'
+        # CodeQL supports the following values keywords for 'language': 'actions', 'c-cpp', ..
     # Runner size impacts CodeQL analysis time. To learn more, please see:
     #   - https://gh.io/recommended-hardware-resources-for-running-codeql
     #   - https://gh.io/supported-runners-and-hardware-resources
